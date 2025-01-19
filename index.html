@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>银莺路小学五年级（10）班</title>
+	<link rel="stylesheet" href="css/style.css">
+    <style>
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        h1, h2, h3 {
+            color: #444;
+            text-align: center; /* 标题居中 */
+        }
+
+        .section {
+            padding: 2em 0;
+            text-align: center; /* 段落内容居中 */
+        }
+
+        #hero .hero-text {
+            text-align: center;
+            margin: auto; /* 居中对齐 */
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #0073e6;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+        }
+
+        #contact img {
+            display: block;
+            margin: 20px auto;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            button {
+                width: 100%;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>银莺路小学五年级（10）班</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="#news">近期班级动态</a></li>
+                    <li><a href="#join">了解更多</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-text">
+                <h2>银莺路小学五年级（10）班</h2>
+                <p>河南省郑州市银莺路小学五年级（10）班</p>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2>关于我们</h2>
+                <p>河南省郑州市管城回族区银莺路小学五年级（10）班共51人</p>
+            </div>
+        </section>
+
+        <section id="news" class="section">
+            <div class="container">
+                <h2>近期班级动态</h2>
+                <article>
+                    <h3>近期活动：同学聚会</h3>
+                    <p>银莺路小学五年级（10）班于2025年1月16日下午2时举行同学聚会，结束时共9人参加。</p>
+                </article>
+                <article>
+                    <h3>银莺路小学2020届五年级上学期已结束</h3>
+                    <p>银莺路小学2020届五年级上学期已结束，将在2025年1月20日举办散学典礼。</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="join" class="section">
+            <div class="container">
+                <h2>了解更多</h2>
+                <p>想要了解更多？请点击按钮跳转。</p>
+                <button data-url="from.html">了解更多</button>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>联系我们</h2>
+                <p>邮箱：3673313055@qq.com</p>
+                <img src="img/bili.png" alt="跳转至 Bilibili 的链接" data-url="https://space.bilibili.com/591101714?spm_id_from=333.1007.0.0" style="width: 56px;">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 银莺路小学2020届五年级(10)班 | 发展美好未来</p>
+        </div>
+    </footer>
+
+    <script>
+        // 添加点击事件实现跳转
+        document.querySelectorAll('button, img').forEach(element => {
+            element.addEventListener('click', event => {
+                const url = element.dataset.url;
+                if (url) window.location.href = url;
+            });
+        });
+    </script>
+</body>
+</html>
